@@ -11,6 +11,12 @@ const AddMovie = ({add}) => {
     const [description, setDescription] = useState ('')
     const [rate , setRate] = useState (0)
     const [posterUrl, setPosterUrlcv] = useState (' ')
+
+    const handleAdd = () => {
+      let newMovie = {title, description, rate , posterUrl}
+      add(newMovie)
+      handleClose()
+    }
     return (
     <div>
 <Button variant="primary" onClick={handleShow}>
@@ -39,7 +45,7 @@ const AddMovie = ({add}) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleAdd}>
             Save Changes
           </Button>
         </Modal.Footer>

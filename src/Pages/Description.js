@@ -10,7 +10,7 @@ const Description = () => {
   const {id} =useParams()
 
   useEffect(()=> {
-    const foundMovie = moviesData.find((el)=> el.id == id)
+    const foundMovie = moviesData.find((el)=> el.id === id)
     setMovie(foundMovie)
   }, {id})
 
